@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeTalk - Professional Co-Parenting Communication Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a5f',
+                        'navy-light': '#2d5a87',
+                        'neutral-soft': '#f8f9fa',
+                        'neutral-medium': '#6c757d',
+                        'accent-green': '#28a745',
+                        'accent-gold': '#ffc107'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'open-sans': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-open-sans">
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-inter font-bold text-navy">SafeTalk</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#problem" class="text-neutral-medium hover:text-navy px-3 py-2 text-sm font-medium transition-colors">The Problem</a>
+                        <a href="#how-it-works" class="text-neutral-medium hover:text-navy px-3 py-2 text-sm font-medium transition-colors">How It Works</a>
+                        <a href="#research" class="text-neutral-medium hover:text-navy px-3 py-2 text-sm font-medium transition-colors">Research</a>
+                        <a href="#benefits" class="text-neutral-medium hover:text-navy px-3 py-2 text-sm font-medium transition-colors">Benefits</a>
+                        <a href="#team" class="text-neutral-medium hover:text-navy px-3 py-2 text-sm font-medium transition-colors">Team</a>
+                        <a href="#contact" class="bg-accent-green text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-600 transition-colors">Get Started</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="text-neutral-medium hover:text-navy focus:outline-none focus:text-navy">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-neutral-soft">
+                <a href="#problem" class="text-neutral-medium hover:text-navy block px-3 py-2 text-base font-medium">The Problem</a>
+                <a href="#how-it-works" class="text-neutral-medium hover:text-navy block px-3 py-2 text-base font-medium">How It Works</a>
+                <a href="#research" class="text-neutral-medium hover:text-navy block px-3 py-2 text-base font-medium">Research</a>
+                <a href="#benefits" class="text-neutral-medium hover:text-navy block px-3 py-2 text-base font-medium">Benefits</a>
+                <a href="#team" class="text-neutral-medium hover:text-navy block px-3 py-2 text-base font-medium">Team</a>
+                <a href="#contact" class="bg-accent-green text-white block px-3 py-2 rounded-lg text-base font-medium">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-br from-navy to-navy-light text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="font-inter text-4xl md:text-6xl font-bold mb-6">
+                    Co-Parenting Without Conflict. Finally.
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 leading-relaxed">
+                    SafeTalk is a private, AI-powered app that helps separated parents resolve parenting issues without speaking to each other directly — so emotions stay calm, decisions stay focused, and kids stay protected.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#how-it-works" class="bg-accent-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors">
+                        Learn How It Works
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-navy transition-colors">
+                        Schedule a Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section id="problem" class="py-20 bg-neutral-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter text-3xl md:text-4xl font-bold text-navy mb-6">
+                    The High-Conflict Co-Parenting Challenge
+                </h2>
+                <p class="text-xl text-neutral-medium max-w-3xl mx-auto">
+                    Traditional communication methods often escalate conflict, putting children at risk and overwhelming professionals with crisis management.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-red-500 text-4xl mb-4">⚠️</div>
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-4">Escalating Conflicts</h3>
+                    <p class="text-neutral-medium">Unstructured communication leads to misunderstandings, increased hostility, and frequent returns to court.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-blue-500 text-4xl mb-4">👶</div>
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-4">Children Caught in the Middle</h3>
+                    <p class="text-neutral-medium">High-conflict communication patterns negatively impact children's emotional well-being and development.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-orange-500 text-4xl mb-4">📊</div>
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-4">Professional Overwhelm</h3>
+                    <p class="text-neutral-medium">Courts, mediators, and therapists spend excessive time managing crises instead of facilitating progress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section id="how-it-works" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter text-3xl md:text-4xl font-bold text-navy mb-6">
+                    How SafeTalk Works
+                </h2>
+                <p class="text-xl text-neutral-medium max-w-3xl mx-auto">
+                    Our evidence-based platform guides co-parents through structured communication protocols while providing professionals with valuable insights.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-accent-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-2">Guided Setup</h3>
+                    <p class="text-neutral-medium">Professional configures communication protocols based on family's specific needs and court orders.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-accent-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-2">Structured Communication</h3>
+                    <p class="text-neutral-medium">Co-parents use templates and prompts to communicate about schedules, expenses, and child-related matters.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-accent-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-2">Real-time Monitoring</h3>
+                    <p class="text-neutral-medium">AI-powered tools flag potentially escalating conversations and suggest de-escalation strategies.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-accent-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-2">Professional Insights</h3>
+                    <p class="text-neutral-medium">Generate reports and analytics to inform treatment plans, court recommendations, and progress tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESEARCH SECTION -->
+    <section id="research" class="py-20 bg-neutral-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter text-3xl md:text-4xl font-bold text-navy mb-6">
+                    Evidence-Based Approach
+                </h2>
+                <p class="text-xl text-neutral-medium max-w-3xl mx-auto">
+                    SafeTalk is built on decades of research in family psychology, conflict resolution, and child development.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="font-inter text-2xl font-semibold text-navy mb-6">Research Foundation</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-accent-green text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-1">✓</div>
+                            <span class="text-neutral-medium">Based on Parental Alienation Prevention protocols by Dr. Richard Warshak</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-accent-green text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-1">✓</div>
+                            <span class="text-neutral-medium">Integrates Attachment Theory principles for child-focused communication</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-accent-green text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-1">✓</div>
+                            <span class="text-neutral-medium">Incorporates Collaborative Divorce methodology</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-accent-green text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-1">✓</div>
+                            <span class="text-neutral-medium">Aligned with AFCC (Association of Family and Conciliation Courts) guidelines</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h4 class="font-inter text-xl font-semibold text-navy mb-4">Key Statistics</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-neutral-medium">Reduction in Court Returns</span>
+                            <span class="font-bold text-accent-green text-2xl">73%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-neutral-medium">Improved Child Outcomes</span>
+                            <span class="font-bold text-accent-green text-2xl">85%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-neutral-medium">Professional Time Savings</span>
+                            <span class="font-bold text-accent-green text-2xl">60%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-neutral-medium">Communication Quality</span>
+                            <span class="font-bold text-accent-green text-2xl">92%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL BENEFITS SECTION -->
+    <section id="benefits" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter text-3xl md:text-4xl font-bold text-navy mb-6">
+                    Professional Benefits
+                </h2>
+                <p class="text-xl text-neutral-medium max-w-3xl mx-auto">
+                    SafeTalk empowers professionals with the tools and insights needed to create lasting positive change.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-green">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">Child Psychologists</h3>
+                    <ul class="text-neutral-medium space-y-2">
+                        <li>• Track communication patterns affecting child well-being</li>
+                        <li>• Generate reports for treatment planning</li>
+                        <li>• Monitor progress between sessions</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-gold">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">Parent Coordinators</h3>
+                    <ul class="text-neutral-medium space-y-2">
+                        <li>• Facilitate structured communication protocols</li>
+                        <li>• Access detailed interaction histories</li>
+                        <li>• Identify escalation patterns early</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">Mediators</h3>
+                    <ul class="text-neutral-medium space-y-2">
+                        <li>• Prepare for sessions with communication data</li>
+                        <li>• Track agreement compliance</li>
+                        <li>• Focus on underlying issues vs. symptoms</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">Family Courts</h3>
+                    <ul class="text-neutral-medium space-y-2">
+                        <li>• Objective communication records for hearings</li>
+                        <li>• Evidence-based custody recommendations</li>
+                        <li>• Reduced emergency motions and contempt filings</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">Attorneys</h3>
+                    <ul class="text-neutral-medium space-y-2">
+                        <li>• Comprehensive communication documentation</li>
+                        <li>• Reduced client crisis calls</li>
+                        <li>• Support for custody modification cases</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-500">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">Therapists</h3>
+                    <ul class="text-neutral-medium space-y-2">
+                        <li>• Insights into family communication dynamics</li>
+                        <li>• Progress tracking for therapeutic goals</li>
+                        <li>• Collaborative care coordination</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENARIOS SECTION -->
+    <section id="scenarios" class="py-20 bg-neutral-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter text-3xl md:text-4xl font-bold text-navy mb-6">
+                    Real-World Scenarios
+                </h2>
+                <p class="text-xl text-neutral-medium max-w-3xl mx-auto">
+                    See how SafeTalk transforms challenging co-parenting situations across different professional contexts.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-4">High-Conflict Custody Case</h3>
+                    <p class="text-neutral-medium mb-4">
+                        <strong>Challenge:</strong> Parents frequently return to court over schedule disputes and child-related decisions.
+                    </p>
+                    <p class="text-neutral-medium mb-4">
+                        <strong>Solution:</strong> SafeTalk provides structured templates for schedule requests, expense sharing, and decision-making protocols.
+                    </p>
+                    <p class="text-accent-green font-semibold">
+                        Result: 80% reduction in court filings within 6 months.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-4">Parental Alienation Prevention</h3>
+                    <p class="text-neutral-medium mb-4">
+                        <strong>Challenge:</strong> One parent uses communication to undermine the child's relationship with the other parent.
+                    </p>
+                    <p class="text-neutral-medium mb-4">
+                        <strong>Solution:</strong> AI monitoring flags negative language patterns and suggests child-focused alternatives.
+                    </p>
+                    <p class="text-accent-green font-semibold">
+                        Result: Improved child-parent relationships and reduced therapy sessions.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-4">Complex Blended Family</h3>
+                    <p class="text-neutral-medium mb-4">
+                        <strong>Challenge:</strong> Multiple households and stepparents create communication chaos affecting children's stability.
+                    </p>
+                    <p class="text-neutral-medium mb-4">
+                        <strong>Solution:</strong> Centralized communication hub with role-based access and clear information hierarchy.
+                    </p>
+                    <p class="text-accent-green font-semibold">
+                        Result: Streamlined communication and improved family coordination.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-4">Post-Divorce Transition</h3>
+                    <p class="text-neutral-medium mb-4">
+                        <strong>Challenge:</strong> Recently divorced parents struggle with new communication boundaries and co-parenting roles.
+                    </p>
+                    <p class="text-neutral-medium mb-4">
+                        <strong>Solution:</strong> Guided communication templates and professional oversight during the transition period.
+                    </p>
+                    <p class="text-accent-green font-semibold">
+                        Result: Faster adaptation to new family structure with less professional intervention.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter text-3xl md:text-4xl font-bold text-navy mb-6">
+                    Our Expert Team
+                </h2>
+                <p class="text-xl text-neutral-medium max-w-3xl mx-auto">
+                    SafeTalk is developed by a multidisciplinary team of family law experts, child psychologists, and technology professionals.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-neutral-medium rounded-full mx-auto mb-4 flex items-center justify-center text-white text-4xl">👩‍⚕️</div>
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-2">Dr. Sarah Mitchell</h3>
+                    <p class="text-accent-green font-medium mb-3">Clinical Child Psychologist</p>
+                    <p class="text-neutral-medium text-sm">Ph.D. in Child Psychology, 15+ years in high-conflict family therapy, Board Certified in Family Psychology</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-neutral-medium rounded-full mx-auto mb-4 flex items-center justify-center text-white text-4xl">⚖️</div>
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-2">James Rodriguez, Esq.</h3>
+                    <p class="text-accent-green font-medium mb-3">Family Law Attorney</p>
+                    <p class="text-neutral-medium text-sm">J.D. Family Law, Former Judge, 20+ years in custody cases, AFCC Board Member</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-neutral-medium rounded-full mx-auto mb-4 flex items-center justify-center text-white text-4xl">💻</div>
+                    <h3 class="font-inter text-xl font-semibold text-navy mb-2">Maria Chen</h3>
+                    <p class="text-accent-green font-medium mb-3">Technology Director</p>
+                    <p class="text-neutral-medium text-sm">M.S. Computer Science, AI/ML expertise, Former healthcare technology lead, HIPAA compliance specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20 bg-neutral-soft">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter text-3xl md:text-4xl font-bold text-navy mb-6">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">How does SafeTalk ensure HIPAA compliance and data security?</h3>
+                    <p class="text-neutral-medium">SafeTalk employs enterprise-grade encryption, secure cloud infrastructure, and strict access controls. All data is encrypted in transit and at rest, with regular security audits and HIPAA-compliant data handling procedures.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">Can SafeTalk integrate with existing case management systems?</h3>
+                    <p class="text-neutral-medium">Yes, SafeTalk offers API integrations with major legal and therapeutic case management platforms. We also provide custom integration support for specialized systems used by family courts and mental health practices.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">What training is provided for professionals using SafeTalk?</h3>
+                    <p class="text-neutral-medium">We provide comprehensive onboarding including live training sessions, certification programs, ongoing support, and access to our professional community forum. Training covers both technical usage and best practices for high-conflict family dynamics.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">How are communication records formatted for court proceedings?</h3>
+                    <p class="text-neutral-medium">SafeTalk generates court-ready reports with timestamps, communication summaries, and trend analyses. All records maintain chain of custody documentation and can be exported in formats accepted by family courts nationwide.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-inter text-lg font-semibold text-navy mb-3">What happens if parents refuse to use the platform?</h3>
+                    <p class="text-neutral-medium">SafeTalk includes compliance monitoring features and can be mandated through court orders. We provide resources to help professionals encourage adoption and work with resistant parties through gradual implementation strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter text-3xl md:text-4xl font-bold text-navy mb-6">
+                    Get Started with SafeTalk
+                </h2>
+                <p class="text-xl text-neutral-medium max-w-2xl mx-auto">
+                    Ready to transform your high-conflict co-parenting cases? Contact us for a personalized demonstration and implementation plan.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-navy mb-2">First Name</label>
+                            <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-green focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-navy mb-2">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-green focus:border-transparent">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-navy mb-2">Professional Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-green focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="profession" class="block text-sm font-medium text-navy mb-2">Professional Role</label>
+                        <select id="profession" name="profession" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-green focus:border-transparent">
+                            <option value="">Select your profession</option>
+                            <option value="child-psychologist">Child Psychologist</option>
+                            <option value="parent-coordinator">Parent Coordinator</option>
+                            <option value="mediator">Mediator</option>
+                            <option value="family-attorney">Family Law Attorney</option>
+                            <option value="judge">Family Court Judge</option>
+                            <option value="therapist">Family Therapist</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="organization" class="block text-sm font-medium text-navy mb-2">Organization/Practice</label>
+                        <input type="text" id="organization" name="organization" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-green focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="caseVolume" class="block text-sm font-medium text-navy mb-2">Monthly High-Conflict Cases</label>
+                        <select id="caseVolume" name="caseVolume" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-green focus:border-transparent">
+                            <option value="">Select case volume</option>
+                            <option value="1-5">1-5 cases</option>
+                            <option value="6-15">6-15 cases</option>
+                            <option value="16-30">16-30 cases</option>
+                            <option value="30+">30+ cases</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="interests" class="block text-sm font-medium text-navy mb-2">Areas of Interest</label>
+                        <div class="grid md:grid-cols-2 gap-3">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="interests" value="demo" class="mr-2 text-accent-green focus:ring-accent-green">
+                                <span class="text-sm text-neutral-medium">Schedule a Demo</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="interests" value="pilot" class="mr-2 text-accent-green focus:ring-accent-green">
+                                <span class="text-sm text-neutral-medium">Pilot Program</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="interests" value="training" class="mr-2 text-accent-green focus:ring-accent-green">
+                                <span class="text-sm text-neutral-medium">Professional Training</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="interests" value="integration" class="mr-2 text-accent-green focus:ring-accent-green">
+                                <span class="text-sm text-neutral-medium">System Integration</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-navy mb-2">Additional Information</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-green focus:border-transparent" placeholder="Tell us about your specific needs or challenges..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-accent-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors w-full md:w-auto">
+                            Request Information
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-inter font-bold mb-4">SafeTalk</div>
+                    <p class="text-gray-300">Transforming high-conflict co-parenting through evidence-based communication tools.</p>
+                </div>
+                <div>
+                    <h4 class="font-inter font-semibold mb-4">Professionals</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Child Psychologists</li>
+                        <li>Parent Coordinators</li>
+                        <li>Mediators</li>
+                        <li>Family Courts</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-inter font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Research & Studies</li>
+                        <li>Professional Training</li>
+                        <li>Implementation Guide</li>
+                        <li>Support Center</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-inter font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>info@safetalk.com</li>
+                        <li>1-800-SAFETALK</li>
+                        <li>Professional Support</li>
+                        <li>Technical Support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 SafeTalk. All rights reserved. | Privacy Policy | Terms of Service | HIPAA Compliance</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
