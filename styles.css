@@ -10,12 +10,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #28a745;
+    background: #7dd3fc;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #218838;
+    background: #059669;
 }
 
 /* Smooth transitions for all interactive elements */
@@ -25,7 +25,7 @@
 
 /* Custom focus styles for accessibility */
 *:focus {
-    outline: 2px solid #28a745;
+    outline: 2px solid #7dd3fc;
     outline-offset: 2px;
 }
 
@@ -37,7 +37,7 @@ nav {
 
 /* Hero section gradient animation */
 .hero-gradient {
-    background: linear-gradient(-45deg, #1e3a5f, #2d5a87, #1e3a5f, #2d5a87);
+    background: linear-gradient(-45deg, #059669, #7dd3fc, #a7f3d0, #7dd3fc);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
 }
@@ -66,7 +66,7 @@ nav {
 
 /* Button hover effects */
 .btn-primary {
-    background: linear-gradient(135deg, #28a745, #20c997);
+    background: linear-gradient(135deg, #7dd3fc, #a7f3d0);
     position: relative;
     overflow: hidden;
 }
@@ -90,7 +90,7 @@ nav {
 .stat-number {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #28a745;
+    color: #7dd3fc;
     display: block;
 }
 
@@ -101,7 +101,7 @@ nav {
 }
 
 .faq-item:hover {
-    border-left-color: #28a745;
+    border-left-color: #7dd3fc;
 }
 
 /* Form enhancements */
@@ -111,8 +111,8 @@ nav {
 }
 
 .form-input:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+    border-color: #7dd3fc;
+    box-shadow: 0 0 0 3px rgba(45, 125, 50, 0.1);
     transform: translateY(-1px);
 }
 
@@ -189,7 +189,7 @@ section:nth-child(even) {
     width: 20px;
     height: 20px;
     margin: -10px 0 0 -10px;
-    border: 2px solid #28a745;
+    border: 2px solid #7dd3fc;
     border-top: 2px solid transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
@@ -198,6 +198,195 @@ section:nth-child(even) {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+.slideshow-prev,
+.slideshow-next {
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.slideshow-prev:hover,
+.slideshow-next:hover {
+    transform: translateY(-50%) scale(1.1);
+    background-color: rgba(45, 125, 50, 0.9);
+}
+
+.step-text {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.step-text.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dot {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #7dd3fc;
+}
+
+.dot:not(.active):hover {
+    background-color: #a7f3d0;
+    transform: scale(1.2);
+}
+
+/* Auto-play button styles */
+#play-pause-btn {
+    transition: all 0.3s ease;
+}
+
+#play-pause-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Enhanced responsive slideshow */
+@media (max-width: 1024px) {
+    /* Stack vertically on tablet and below */
+    .slideshow-container {
+        height: 400px;
+    }
+    
+    .step-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .step-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile optimizations */
+    .slideshow-container {
+        height: 350px;
+    }
+    
+    .slideshow-prev,
+    .slideshow-next {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+    }
+    
+    .slideshow-prev svg,
+    .slideshow-next svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .step-text h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .step-text p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    /* Ensure proper spacing on mobile */
+    .lg\:col-span-2 {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .slideshow-container {
+        height: 300px;
+    }
+    
+    .step-text h3 {
+        font-size: 1.125rem;
+    }
+    
+    .step-text p {
+        font-size: 0.875rem;
+    }
+    
+    .lg\:col-span-2 {
+        padding: 1rem;
+    }
+}
+
+
+/* App Slideshow Styles */
+.app-step-content {
+    display: none;
+}
+
+.app-step-content.active {
+    display: block;
+}
+
+.app-slideshow-prev,
+.app-slideshow-next {
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.app-slideshow-prev:hover,
+.app-slideshow-next:hover {
+    transform: translateY(-50%) scale(1.1);
+    background-color: rgba(45, 125, 50, 0.9);
+}
+
+.app-dot {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.app-dot.active {
+    background-color: #7dd3fc;
+}
+
+.app-dot:not(.active):hover {
+    background-color: #a7f3d0;
+    transform: scale(1.2);
 }
 
 /* Responsive typography */
